@@ -1,0 +1,482 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.1">
+  <description></description>
+  <groupId>f1359313-015e-1000-4c36-bf954f89ae31</groupId>
+  <name>OpenCV Face Detection</name>
+  <snippet>
+    <connections>
+      <id>de5b4674-d936-338a-0000-000000000000</id>
+      <parentGroupId>837c04a2-089f-3d5b-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>d7ddf2ef-5e43-335f-0000-000000000000</groupId>
+        <id>7094307a-c21f-35ce-0000-000000000000</id>
+        <type>INPUT_PORT</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>837c04a2-089f-3d5b-0000-000000000000</groupId>
+        <id>2c9f0641-5751-3233-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <processGroups>
+      <id>d7ddf2ef-5e43-335f-0000-000000000000</id>
+      <parentGroupId>837c04a2-089f-3d5b-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>215.0</y>
+      </position>
+      <comments></comments>
+      <contents>
+        <connections>
+          <id>9738b090-2756-3ef7-0000-000000000000</id>
+          <parentGroupId>d7ddf2ef-5e43-335f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>d7ddf2ef-5e43-335f-0000-000000000000</groupId>
+            <id>dea20438-1209-32be-0000-000000000000</id>
+            <type>FUNNEL</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>unmatched</selectedRelationships>
+          <source>
+            <groupId>d7ddf2ef-5e43-335f-0000-000000000000</groupId>
+            <id>51a71752-3989-3e5e-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>ac0302cb-4450-3448-0000-000000000000</id>
+          <parentGroupId>d7ddf2ef-5e43-335f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>d7ddf2ef-5e43-335f-0000-000000000000</groupId>
+            <id>51a71752-3989-3e5e-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>d7ddf2ef-5e43-335f-0000-000000000000</groupId>
+            <id>7a655afd-6b1f-3b88-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>adfd2edd-0609-34be-0000-000000000000</id>
+          <parentGroupId>d7ddf2ef-5e43-335f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>d7ddf2ef-5e43-335f-0000-000000000000</groupId>
+            <id>a80cf593-9d02-3549-0000-000000000000</id>
+            <type>OUTPUT_PORT</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>faces</selectedRelationships>
+          <source>
+            <groupId>d7ddf2ef-5e43-335f-0000-000000000000</groupId>
+            <id>51a71752-3989-3e5e-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>be8266d4-739b-3c95-0000-000000000000</id>
+          <parentGroupId>d7ddf2ef-5e43-335f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>d7ddf2ef-5e43-335f-0000-000000000000</groupId>
+            <id>7a655afd-6b1f-3b88-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <source>
+            <groupId>d7ddf2ef-5e43-335f-0000-000000000000</groupId>
+            <id>7094307a-c21f-35ce-0000-000000000000</id>
+            <type>INPUT_PORT</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>3d6c9633-ba12-3d1d-0000-000000000000</id>
+          <parentGroupId>d7ddf2ef-5e43-335f-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>d7ddf2ef-5e43-335f-0000-000000000000</groupId>
+            <id>71a80ab2-a8e7-3c82-0000-000000000000</id>
+            <type>OUTPUT_PORT</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>matched</selectedRelationships>
+          <source>
+            <groupId>d7ddf2ef-5e43-335f-0000-000000000000</groupId>
+            <id>51a71752-3989-3e5e-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <funnels>
+          <id>dea20438-1209-32be-0000-000000000000</id>
+          <parentGroupId>d7ddf2ef-5e43-335f-0000-000000000000</parentGroupId>
+          <position>
+            <x>650.8750305175781</x>
+            <y>849.0</y>
+          </position>
+        </funnels>
+        <inputPorts>
+          <id>7094307a-c21f-35ce-0000-000000000000</id>
+          <parentGroupId>d7ddf2ef-5e43-335f-0000-000000000000</parentGroupId>
+          <position>
+            <x>554.8750305175781</x>
+            <y>294.5175982070273</y>
+          </position>
+          <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+          <name>Input Images</name>
+          <state>RUNNING</state>
+          <type>INPUT_PORT</type>
+        </inputPorts>
+        <outputPorts>
+          <id>a80cf593-9d02-3549-0000-000000000000</id>
+          <parentGroupId>d7ddf2ef-5e43-335f-0000-000000000000</parentGroupId>
+          <position>
+            <x>1155.9925571710974</x>
+            <y>568.5695547140847</y>
+          </position>
+          <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+          <name>Faces</name>
+          <state>STOPPED</state>
+          <type>OUTPUT_PORT</type>
+          <validationErrors>'Port 'Faces'' is invalid because Output connection for port 'Faces' is not defined.</validationErrors>
+        </outputPorts>
+        <outputPorts>
+          <id>71a80ab2-a8e7-3c82-0000-000000000000</id>
+          <parentGroupId>d7ddf2ef-5e43-335f-0000-000000000000</parentGroupId>
+          <position>
+            <x>1155.9925571710974</x>
+            <y>714.1182250976562</y>
+          </position>
+          <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+          <name>Images with Faces</name>
+          <state>STOPPED</state>
+          <type>OUTPUT_PORT</type>
+          <validationErrors>'Port 'Images with Faces'' is invalid because Output connection for port 'Images with Faces' is not defined.</validationErrors>
+        </outputPorts>
+        <processors>
+          <id>51a71752-3989-3e5e-0000-000000000000</id>
+          <parentGroupId>d7ddf2ef-5e43-335f-0000-000000000000</parentGroupId>
+          <position>
+            <x>499.8750305175781</x>
+            <y>606.7474975585938</y>
+          </position>
+          <bundle>
+            <artifact>nifi-OpenCV-nar</artifact>
+            <group>com.simonellistonball.nifi</group>
+            <version>0.0.3-SNAPSHOT</version>
+          </bundle>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Cascader</key>
+                <value>
+                  <name>Cascader</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Mark Faces</key>
+                <value>
+                  <name>Mark Faces</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Cascader</key>
+                <value>/Users/sball/m3/models/haarcascade_frontalface_default.xml</value>
+              </entry>
+              <entry>
+                <key>Mark Faces</key>
+                <value>true</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>ExtractFaces</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>faces</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>matched</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>unmatched</name>
+          </relationships>
+          <state>RUNNING</state>
+          <style></style>
+          <type>com.simonellistonball.nifi.OpenCV.ExtractFaces</type>
+        </processors>
+        <processors>
+          <id>7a655afd-6b1f-3b88-0000-000000000000</id>
+          <parentGroupId>d7ddf2ef-5e43-335f-0000-000000000000</parentGroupId>
+          <position>
+            <x>499.8750305175781</x>
+            <y>405.0620422363281</y>
+          </position>
+          <bundle>
+            <artifact>nifi-media-nar</artifact>
+            <group>org.apache.nifi</group>
+            <version>1.4.0</version>
+          </bundle>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Image Width (in pixels)</key>
+                <value>
+                  <name>Image Width (in pixels)</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Image Height (in pixels)</key>
+                <value>
+                  <name>Image Height (in pixels)</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Scaling Algorithm</key>
+                <value>
+                  <name>Scaling Algorithm</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Image Width (in pixels)</key>
+                <value>640</value>
+              </entry>
+              <entry>
+                <key>Image Height (in pixels)</key>
+                <value>480</value>
+              </entry>
+              <entry>
+                <key>Scaling Algorithm</key>
+                <value>Default</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>ResizeImage</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <state>RUNNING</state>
+          <style></style>
+          <type>org.apache.nifi.processors.image.ResizeImage</type>
+        </processors>
+      </contents>
+      <name>OpenCV</name>
+    </processGroups>
+    <processors>
+      <id>2c9f0641-5751-3233-0000-000000000000</id>
+      <parentGroupId>837c04a2-089f-3d5b-0000-000000000000</parentGroupId>
+      <position>
+        <x>18.0</x>
+        <y>0.0</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.4.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Input Directory</key>
+            <value>
+              <name>Input Directory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>File Filter</key>
+            <value>
+              <name>File Filter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Path Filter</key>
+            <value>
+              <name>Path Filter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>
+              <name>Batch Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Keep Source File</key>
+            <value>
+              <name>Keep Source File</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Recurse Subdirectories</key>
+            <value>
+              <name>Recurse Subdirectories</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Polling Interval</key>
+            <value>
+              <name>Polling Interval</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Ignore Hidden Files</key>
+            <value>
+              <name>Ignore Hidden Files</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum File Age</key>
+            <value>
+              <name>Minimum File Age</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Age</key>
+            <value>
+              <name>Maximum File Age</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum File Size</key>
+            <value>
+              <name>Minimum File Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Size</key>
+            <value>
+              <name>Maximum File Size</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Input Directory</key>
+            <value>/Users/sball/m3/in/</value>
+          </entry>
+          <entry>
+            <key>File Filter</key>
+            <value>[^\.].*</value>
+          </entry>
+          <entry>
+            <key>Path Filter</key>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>10</value>
+          </entry>
+          <entry>
+            <key>Keep Source File</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Recurse Subdirectories</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Polling Interval</key>
+            <value>0 sec</value>
+          </entry>
+          <entry>
+            <key>Ignore Hidden Files</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Minimum File Age</key>
+            <value>0 sec</value>
+          </entry>
+          <entry>
+            <key>Maximum File Age</key>
+          </entry>
+          <entry>
+            <key>Minimum File Size</key>
+            <value>0 B</value>
+          </entry>
+          <entry>
+            <key>Maximum File Size</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>10 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>GetFile</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <state>RUNNING</state>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.GetFile</type>
+    </processors>
+  </snippet>
+  <timestamp>10/06/2017 10:56:35 UTC</timestamp>
+</template>

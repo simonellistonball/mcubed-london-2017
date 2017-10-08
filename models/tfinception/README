@@ -1,0 +1,1 @@
+This model is taken from the TensorFlow example website, where it is published under the Apache 2.0 License. The only change to the model is a change of filenames to match the conventions used in the nifi tensorflow processor.

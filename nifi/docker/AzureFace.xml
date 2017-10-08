@@ -1,0 +1,326 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.1">
+  <description></description>
+  <groupId>f26acc8b-015e-1000-6f09-fef9a12a6f47</groupId>
+  <name>AzureFace</name>
+  <snippet>
+    <connections>
+      <id>b772e147-aaa2-33de-0000-000000000000</id>
+      <parentGroupId>8d2f264f-fde1-32b4-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8d2f264f-fde1-32b4-0000-000000000000</groupId>
+        <id>87b1e4fc-0fec-32a5-0000-000000000000</id>
+        <type>FUNNEL</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>REL_FAILURE</selectedRelationships>
+      <selectedRelationships>REL_UNMATCHED</selectedRelationships>
+      <source>
+        <groupId>8d2f264f-fde1-32b4-0000-000000000000</groupId>
+        <id>a0106be0-4218-30c2-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>ccd0cbb9-cc20-3a62-0000-000000000000</id>
+      <parentGroupId>8d2f264f-fde1-32b4-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8d2f264f-fde1-32b4-0000-000000000000</groupId>
+        <id>a0106be0-4218-30c2-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>8d2f264f-fde1-32b4-0000-000000000000</groupId>
+        <id>7a57f9cf-dc74-3718-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>514763aa-3d4f-35e5-0000-000000000000</id>
+      <parentGroupId>8d2f264f-fde1-32b4-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8d2f264f-fde1-32b4-0000-000000000000</groupId>
+        <id>43ec0146-4c91-34b6-0000-000000000000</id>
+        <type>FUNNEL</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>REL_MATCHED</selectedRelationships>
+      <source>
+        <groupId>8d2f264f-fde1-32b4-0000-000000000000</groupId>
+        <id>a0106be0-4218-30c2-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <funnels>
+      <id>87b1e4fc-0fec-32a5-0000-000000000000</id>
+      <parentGroupId>8d2f264f-fde1-32b4-0000-000000000000</parentGroupId>
+      <position>
+        <x>418.89655710589795</x>
+        <y>477.43247578406204</y>
+      </position>
+    </funnels>
+    <funnels>
+      <id>43ec0146-4c91-34b6-0000-000000000000</id>
+      <parentGroupId>8d2f264f-fde1-32b4-0000-000000000000</parentGroupId>
+      <position>
+        <x>35.51425742903302</x>
+        <y>480.45915469823694</y>
+      </position>
+    </funnels>
+    <processors>
+      <id>a0106be0-4218-30c2-0000-000000000000</id>
+      <parentGroupId>8d2f264f-fde1-32b4-0000-000000000000</parentGroupId>
+      <position>
+        <x>4.238426839618569</x>
+        <y>208.05599545783394</y>
+      </position>
+      <bundle>
+        <artifact>nifi-azure-cognitive-nar</artifact>
+        <group>com.simonellistonball.nifi</group>
+        <version>1.0-SNAPSHOT</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>IMAGE_URL</key>
+            <value>
+              <name>IMAGE_URL</name>
+            </value>
+          </entry>
+          <entry>
+            <key>API_KEY</key>
+            <value>
+              <name>API_KEY</name>
+            </value>
+          </entry>
+          <entry>
+            <key>REGION</key>
+            <value>
+              <name>REGION</name>
+            </value>
+          </entry>
+          <entry>
+            <key>DESTINATION</key>
+            <value>
+              <name>DESTINATION</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>IMAGE_URL</key>
+          </entry>
+          <entry>
+            <key>API_KEY</key>
+          </entry>
+          <entry>
+            <key>REGION</key>
+            <value>westus</value>
+          </entry>
+          <entry>
+            <key>DESTINATION</key>
+            <value>flowfile-attribute</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>AzureFaceProcessor</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>REL_FAILURE</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>REL_MATCHED</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>REL_UNMATCHED</name>
+      </relationships>
+      <state>STOPPED</state>
+      <style></style>
+      <type>com.simonellistonball.nifi.processors.azure.cognitive.AzureFaceProcessor</type>
+    </processors>
+    <processors>
+      <id>7a57f9cf-dc74-3718-0000-000000000000</id>
+      <parentGroupId>8d2f264f-fde1-32b4-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>0.0</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.4.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Input Directory</key>
+            <value>
+              <name>Input Directory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>File Filter</key>
+            <value>
+              <name>File Filter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Path Filter</key>
+            <value>
+              <name>Path Filter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>
+              <name>Batch Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Keep Source File</key>
+            <value>
+              <name>Keep Source File</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Recurse Subdirectories</key>
+            <value>
+              <name>Recurse Subdirectories</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Polling Interval</key>
+            <value>
+              <name>Polling Interval</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Ignore Hidden Files</key>
+            <value>
+              <name>Ignore Hidden Files</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum File Age</key>
+            <value>
+              <name>Minimum File Age</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Age</key>
+            <value>
+              <name>Maximum File Age</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum File Size</key>
+            <value>
+              <name>Minimum File Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Size</key>
+            <value>
+              <name>Maximum File Size</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Input Directory</key>
+            <value>/Users/sball/m3/in/</value>
+          </entry>
+          <entry>
+            <key>File Filter</key>
+            <value>[^\.].*</value>
+          </entry>
+          <entry>
+            <key>Path Filter</key>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>10</value>
+          </entry>
+          <entry>
+            <key>Keep Source File</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Recurse Subdirectories</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Polling Interval</key>
+            <value>0 sec</value>
+          </entry>
+          <entry>
+            <key>Ignore Hidden Files</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Minimum File Age</key>
+            <value>0 sec</value>
+          </entry>
+          <entry>
+            <key>Maximum File Age</key>
+          </entry>
+          <entry>
+            <key>Minimum File Size</key>
+            <value>0 B</value>
+          </entry>
+          <entry>
+            <key>Maximum File Size</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>10 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>GetFile</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <state>STOPPED</state>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.GetFile</type>
+    </processors>
+  </snippet>
+  <timestamp>10/08/2017 21:51:05 UTC</timestamp>
+</template>
