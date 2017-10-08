@@ -1,3 +1,9 @@
 [submodule "nifi/nifi-tensorflow-processor"]
 	path = nifi/nifi-tensorflow-processor
 	url = https://github.com/simonellistonball/nifi-tensorflow-processor.git
+[submodule "nifi/nifi-azure-cognitive"]
+	path = nifi/nifi-azure-cognitive
+	url = https://github.com/simonellistonball/nifi-azure-cognitive.git
+[submodule "nifi/nifi-OpenCV"]
+	path = nifi/nifi-OpenCV
+	url = https://github.com/simonellistonball/nifi-OpenCV.git
